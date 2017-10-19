@@ -76,7 +76,7 @@ public class DatabaseCreator {
             protected Void doInBackground(Context... params) {
                 Log.d(LOG_TAG, "Starting bg job " + Thread.currentThread().getName());
 
-                Context context1 = params[0].getApplicationContext();
+                Context context = params[0].getApplicationContext();
 
                 // Reset the database to have a new data in every run
                 context.deleteDatabase(DATABASE_NAME);
@@ -87,9 +87,18 @@ public class DatabaseCreator {
 
                 // Add some data to the database
 
+                mDb = db;
+
                 return null;
             }
+
+            @Override
+            protected void onPostExecute(Void ignored) {
+                mIsDatabaseCreated.setValue(true);
+            }
         };
+
+
 
 
 

@@ -1,4 +1,4 @@
-package com.pfariasmunoz.mymedicallicenses.data.utils;
+package com.pfariasmunoz.mymedicallicenses.data;
 
 import com.pfariasmunoz.mymedicallicenses.data.entity.LicenseEntity;
 import com.pfariasmunoz.mymedicallicenses.data.entity.RecipientEntity;
