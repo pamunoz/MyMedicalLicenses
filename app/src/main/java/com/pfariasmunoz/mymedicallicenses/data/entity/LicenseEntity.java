@@ -4,7 +4,9 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.ForeignKey;
 import android.arch.persistence.room.Index;
 import android.arch.persistence.room.PrimaryKey;
+import android.arch.persistence.room.TypeConverters;
 
+import com.pfariasmunoz.mymedicallicenses.data.converter.BooleanConverter;
 import com.pfariasmunoz.mymedicallicenses.model.License;
 import com.pfariasmunoz.mymedicallicenses.model.Recipient;
 
@@ -29,6 +31,7 @@ public class LicenseEntity implements License {
     private int duration;
     private Date startDate;
     private Date endDate;
+    @TypeConverters(BooleanConverter.class)
     private boolean isPaid;
 
     @Override

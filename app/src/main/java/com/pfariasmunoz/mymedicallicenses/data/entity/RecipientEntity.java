@@ -58,4 +58,7 @@ public class RecipientEntity implements Recipient {
         this.lastName = recipient.getLastName();
         this.rut = recipient.getRut();
     }
+
+    public RecipientEntity() {
+    }
 }

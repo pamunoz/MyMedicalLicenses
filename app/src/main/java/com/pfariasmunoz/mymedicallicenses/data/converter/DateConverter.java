@@ -1,4 +1,4 @@
-package com.pfariasmunoz.mymedicallicenses.data.utils;
+package com.pfariasmunoz.mymedicallicenses.data.converter;
 
 import android.arch.persistence.room.TypeConverter;
 
